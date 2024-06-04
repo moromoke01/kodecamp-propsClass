@@ -1,5 +1,4 @@
 // App.jsx
-import React from "react";
 import CustomCard from "./components/CustomCard"; // Ensure this path is correct
 
 const App = () => {

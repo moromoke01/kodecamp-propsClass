@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'; 
 
 const CustomCard = ({name, age, location, hobbies}) => {
   return (
@@ -9,7 +9,7 @@ const CustomCard = ({name, age, location, hobbies}) => {
       <p>Hobbies:</p>
       <ul>
         {hobbies.map((hobby, index)=>(
-          <li>{hobby}</li>
+          <li key={index}>{hobby}</li>
         ))}
       </ul>
     </div>
@@ -17,3 +17,10 @@ const CustomCard = ({name, age, location, hobbies}) => {
 }
 
 export default CustomCard
+
+CustomCard.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  location: PropTypes.string,
+  hobbies: PropTypes.array
+}

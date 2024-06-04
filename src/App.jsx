@@ -1,35 +1,34 @@
 // App.jsx
-import React from 'react';
-import CustomCard from './components/CustomCard'; // Ensure this path is correct
+import React from "react";
+import CustomCard from "./components/CustomCard"; // Ensure this path is correct
 
 const App = () => {
-
   const CardData = [
     {
-      name: 'John Joe',
+      name: "John Joe",
       age: 45,
-      location: 'london',
-      hobbies: ['sports', 'cooking', 'gaming']
+      location: "london",
+      hobbies: ["sports", "cooking", "gaming"],
     },
     {
-      name: 'John Joe',
+      name: "John Joe",
       age: 45,
-      location: 'london',
-      hobbies: ['sports', 'cooking', 'gaming']
+      location: "london",
+      hobbies: ["sports", "cooking", "gaming"],
     },
     {
-      name: 'John Joe',
+      name: "John Joe",
       age: 45,
-      location: 'london',
-      hobbies: ['sports', 'cooking', 'gaming']
+      location: "london",
+      hobbies: ["sports", "cooking", "gaming"],
     },
     {
-      name: 'John Joe',
+      name: "John Joe",
       age: 45,
-      location: 'london',
-      hobbies: ['sports', 'cooking', 'gaming']
+      location: "london",
+      hobbies: ["sports", "cooking", "gaming"],
     },
-  ]
+  ];
 
   return (
     <div>
@@ -41,21 +40,17 @@ const App = () => {
         hobbies={["Reading", "Traveling", "Swimming"]}
       />
 
-   {CardData.map((Card, index)=>{
-  <CustomCard 
-  name={Card.name}
-  age={Card.age}
-  location = {Card.location}
-  hobbies = {Card.hobbies}
- />
-})}
+      {CardData.map((Card, index) => (
+        <CustomCard
+          key={index}
+          name={Card.name}
+          age={Card.age}
+          location={Card.location}
+          hobbies={Card.hobbies}
+        />
+      ))}
     </div>
-
-   
   );
-
-
-
-}
+};
 
 export default App;
